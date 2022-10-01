@@ -1,0 +1,372 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{definitions}[2012/07/02 v1.0 NUTN thesis format]
+%\usepackage[tmargin=2.5cm,bmargin=2.5cm,lmargin=3cm,rmargin=2cm,footskip=1.5cm,a4paper]{geometry}
+%\usepackage{times}
+%\usepackage{type1cm}
+%\usepackage{CJKulem}
+%\usepackage{soul}
+%\usepackage{setspace}
+
+%\newcommand{\enThesisType}{Master}
+
+%\DeclareOption{master}{\renewcommand{\enThesisType}{Master} \renewcommand{\zhThesisType}{碩士}}
+%\DeclareOption{phd}{\renewcommand{\enThesisType}{Doctoral} \renewcommand{\zhThesisType}{博士}}
+%\DeclareOption{draft}{\renewcommand{\zhDraftName}{ (初稿) }}
+
+%\newcommand{\zhKaiFont}{\CJKfamily{bkai}}  %設定中文楷體字型
+%\newcommand{\zhMingFont}{\CJKfamily{bsmi}}  %設定中文明體字型
+
+\newcommand{\contentwidth}{160mm}
+\newcommand{\lbox}[2]{\makebox[\contentwidth][#1]{#2}}
+\newcommand{\mfbox}[2]{\mbox{\parbox[t]{#1}{#2}}}
+\newcommand{\mflbox}[1]{\mfbox{\contentwidth}{#1}}
+\newcommand{\hs}{\makebox[0.5em]{}}
+\newcommand{\Hs}{\makebox[1em]{}}
+\newcommand{\HS}{\makebox[2em]{}}
+\newcommand{\vs}{\vspace{0.5em}}
+\newcommand{\Vs}{\vspace{1em}}
+\newcommand{\VS}{\vspace{2em}}
+\newcommand{\ind}{\mbox{\qquad}}
+
+% 論文行距預設值
+\newcommand{\mybaselinestretch}{2}  %double space
+\renewcommand{\baselinestretch}{\mybaselinestretch}
+
+% 常用行距
+%\newcommand{\mysinglespacing}{\renewcommand{\baselinestretch}{1.18}}
+%\newcommand{\myonehalfspacing}{\renewcommand{\baselinestretch}{1.5}}
+%\newcommand{\mydoublespacing}{\renewcommand{\baselinestretch}{2}}
+\renewcommand{\singlespacing}{\setstretch{1.18}}
+%\newcommand{\onehalfspacing}{\setstretch{1.5}}
+%\newcommand{\doublespacing}{\setstretch{2}}
+
+% 單位
+\newcommand{\SchoolZh}{國立臺南大學}
+\newcommand{\SchoolEn}{National University of Tainan}
+\newcommand{\CityEn}{Tainan}
+\newcommand{\CountryEn}{Taiwan (R.O.C)}
+\newcommand{\CollegeZh}{理工}
+\newcommand{\CollegeEn}{Science and Engineering}
+\newcommand{\DepartmentZh}{資訊工程}
+\newcommand{\DepartmentEn}{Electrical Engineering}
+\newcommand{\DepartmentLevel}{碩士班}
+
+% 論文
+\newcommand{\ThesisType}{碩士論文}
+\newcommand{\Draft}{初稿}
+\newcommand{\TitleEn}{Research of Keroro Alien Invadation}
+\newcommand{\TitleZh}{ケロロ 軍曹外星人入侵研究}
+\newcommand{\KeywordsZh}{回傳迴圈、多重描述編碼、開放式迴圈優先、錯誤回復、H.264/AVC}
+\newcommand{\KeywordsEn}{Loopback, Multiple Description Coding, Open-Loop First, failure recovery, H.264/AVC}
+
+% 提交日期
+\newcommand{\Semester}{九十七}		%學年度
+\newcommand{\SemesterTerm}{二}			%學期
+\newcommand{\SubmissionYearZh}{九十七}	%中華民國紀年年份
+\newcommand{\SubmissionMonthZh}{六}		%中文月份
+\newcommand{\SubmissionYearEn}{2008}	%公元紀年
+\newcommand{\SubmissionMonthEn}{June}	%英文月份
+
+% 研究生與指導教授
+\newcommand{\AuthorZh}{王大明}				%作者中文姓名
+\newcommand{\AuthorEn}{Da-ming Wang}		%作者英文姓名
+\newcommand{\AuthorId}{R123456789}			%作者學號
+\newcommand{\Laboratory}{甚麼都研究實驗室}	%實驗室
+\newcommand{\AdvisorAZh}{日向冬樹}			%指導教授A中文姓名
+\newcommand{\AdvisorAEn}{Fuyuki Hinata}		%指導教授A英文姓名
+\newcommand{\AdvisorATitleZh}{博士}			%指導教授A職稱
+\newcommand{\AdvisorATitleEn}{Dr.}			%指導教授A職稱
+\newcommand{\AdvisorBZh}{月向春樹}		%指導教授B中文姓名
+\newcommand{\AdvisorBEn}{To Murakami}	%指導教授B英文姓名
+\newcommand{\AdvisorBTitleZh}{博士}			%指導教授B職稱
+\newcommand{\AdvisorBTitleEn}{Dr.}			%指導教授B職稱
+
+% 其他頁面資訊
+\newcommand{\PdfTitle}{國立臺南大學數位論文典藏.pdf}
+\newcommand{\PdfKeywords}{回傳迴圈, 多重描述編碼, 開放式迴圈優先, 錯誤回復, H.264/AVC, Multiple Description Coding, Open-Loop First, failure recovery, H.264/AVC}
+\newcommand{\AbstractZhTitle}{論文摘要}
+\newcommand{\AbstractEnTitle}{ABSTRACT}
+\newcommand{\AcknowledgementTitle}{誌謝}
+\newcommand{\AcknowledgementYear}{九十七}
+\newcommand{\AcknowledgementMonth}{九}
+\newcommand{\CommitteeFormTitle}{審定書}
+\newcommand{\Roc}{\makebox[6em][c]{\makebox[5em][s]{中華民國}}}
+\newcommand{\RocShort}{\makebox[3em][s]{民國}}
+\newcommand{\Year}{\makebox[2em][c]{年}}
+\newcommand{\Month}{\makebox[2em][c]{月}}
+\newcommand{\Date}{\makebox[2em][c]{日}}
+
+% 更新預設頁面資訊
+\renewcommand{\contentsname}{目錄}
+\renewcommand{\listfigurename}{圖目錄}
+\renewcommand{\listtablename}{表目錄}
+\renewcommand{\bibname}{參考文獻}
+\renewcommand{\prechaptername}{} % 出現在每一章的開頭的「第 x 章」
+\renewcommand{\postchaptername}{、}
+\renewcommand{\tablename}{表} % 在文章中 table caption 會以「表 x」表示
+\renewcommand{\figurename}{圖} % 在文章中 figure caption 會以「圖 x」表示
+\newcommand{\lstlistingname}{程式碼}
+
+% 浮水印
+\newcommand{\watermark}{
+	\makeatletter
+	\AddToShipoutPicture*{%
+		\setlength{\@tempdimb}{.5\paperwidth}%
+		\setlength{\@tempdimc}{.5\paperheight}%
+		\setlength{\unitlength}{1pt}%
+		\put(\strip@pt\@tempdimb,\strip@pt\@tempdimc){%
+		%\makebox(0,0){\rotatebox{45}{\textcolor[gray]{0.75}{\fontsize{5cm}{5cm}\selectfont{Draft}}}}
+		\makebox(0,0){\includegraphics[scale=1.0]{definitions/watermark_nutn}}}}
+	\makeatother
+}
+
+% 誌謝
+\newenvironment{acknowledgement}{
+	\phantomsection\addcontentsline{toc}{chapter}{\AcknowledgementTitle}
+	\begin{center}\onehalfspacing{
+		\LARGE{\bf{\AcknowledgementTitle}} \\
+	}\end{center}
+	\vspace{42pt}
+	\CJKindent
+}{
+	\vfill
+	\vfill
+	\begin{flushright}
+		\AuthorZh \\
+		\SchoolZh\DepartmentZh{學系}\DepartmentLevel \\
+		\Laboratory \\
+		\Roc\hs\AcknowledgementYear\Year\AcknowledgementMonth\Month
+	\end{flushright}
+	\vfill
+}
+
+% 中文摘要
+\newenvironment{abstractZh}{
+	\newpage
+	\phantomsection\addcontentsline{toc}{chapter}{\AbstractZhTitle}
+	\begin{center}
+		{\doublespacing{\LARGE\bf\TitleZh}} \\
+		\Vs
+		{\onehalfspacing\large{
+			\mflbox{
+				研究生：\AuthorZh\hfill 指導教授：\hs
+				\mfbox{6em}{
+					\AdvisorAZh\Hs\AdvisorATitleZh \\
+					\AdvisorBZh\Hs\AdvisorBTitleZh}} \\
+			\Vs\SchoolZh \DepartmentZh {學系}\DepartmentLevel} \\
+		{\Large\AbstractZhTitle} \\}
+	\end{center}
+	\par
+	\CJKindent
+}{
+	\Vs
+	{\flushleft
+		{\bf{關鍵詞}}：\KeywordsZh}
+}
+
+% 英文摘要
+\newenvironment{abstractEn}{
+	\newpage
+	\phantomsection\addcontentsline{toc}{chapter}{\AbstractEnTitle}
+	\begin{center}
+		{\doublespacing\LARGE\bf\TitleEn} \\
+		\vs
+		{\onehalfspacing\large{
+			\mflbox{
+				Student:\hs\AuthorEn\hfill Advisor:\hs
+				\mfbox{8em}{
+					\AdvisorATitleEn\hs\AdvisorAEn \\
+					\AdvisorBTitleEn\hs\AdvisorBEn}} \\
+			\Vs Department of \DepartmentEn \\
+			\SchoolEn, \CountryEn.} \\
+		\vs
+		\Large{\AbstractEnTitle} \\}
+	\end{center}
+	\Vs
+	\par
+	\noindent
+}{
+	\vs
+	{\flushleft
+		{\bf Keywords}: \KeywordsEn}
+}
+
+% 封面
+\newcommand{\ptitlepage}{
+	\begin{titlepage}
+		\begin{center}
+			\fontsize{46pt}{23pt}\selectfont {\SchoolZh} \\
+			\fontsize{28pt}{38pt}\selectfont {\DepartmentZh{學系}} \\
+			\fontsize{24pt}{32pt}\selectfont {\ThesisType\Draft} \\
+			\vfill
+			\fontsize{20pt}{20pt}\selectfont {\TitleZh} \\
+			\Vs
+			\fontsize{16pt}{16pt}\selectfont {\TitleEn} \\
+			\vfill
+			\makebox[11em][r]{\makebox[4em][s]{指導教授}：\mfbox{6em}{
+			\AdvisorAZh\hspace{1em}\AdvisorATitleZh \\
+			\AdvisorBZh\hspace{1em}\AdvisorBTitleZh}} \\
+			\Vs
+			\makebox[11em][l]{\makebox[4em][s]{研究生}：\AuthorZh} \\
+			\vspace{3em}
+			\fontsize{18pt}{16pt}\selectfont {\Roc\Hs\SubmissionYearZh\Hs\Year\Hs\SubmissionMonthZh\Hs\Month} \\
+		\end{center}
+	\end{titlepage}
+}
+
+% 博碩士論文紙本及數位電子檔著作權授權書
+\newcommand{\pcopyrightcampuslib}{
+	\newpage
+	\begin{titlepage}
+		\begin{center}
+			\makebox[11.9cm][s]{\textbf{{\huge \uline{國立臺南大學}}}} \\
+			\vspace{1.5em}
+			\makebox[12.9cm][s]{\textbf{{\Large \uline{博碩士論文紙本及數位電子檔著作權授權書}}}} \\
+		\end{center}
+		\vspace{2.5em}
+		本授權書所授權之學位論文，為本人於\SchoolZh\uline{\Hs\DepartmentZh學系\DepartmentLevel\Hs}，\uline{\Hs\Semester\Hs}學年度第\uline{\Hs\SemesterTerm\Hs}學期取得博、碩士學位之論文。\vspace{1.5em}\\
+		論文題目：\mfbox{28em}{\bf\TitleZh\vspace{1.5em}} \\
+		指導教授：\mfbox{6em}{
+			\AdvisorAZh\hspace{1em}\AdvisorATitleZh \\
+			\AdvisorBZh\hspace{1em}\AdvisorBTitleZh
+			\vspace{3em}} \\
+		本人茲將本著作，以非專屬、無償授權國立臺南大學，基於推動讀者間「資源共享、互惠合作」之理念，回饋社會與學術研究之目的，國立臺南大學圖書館得以紙本與數位格式收錄、重製與利用；於著作權法合理使用範圍內，讀者得進行閱覽或列印。
+
+		本論文為本人向經濟部智慧局申請專利(未申請者本條款請不予理會)的附件之一，申請文號為：\uline{\makebox[10em]{}}，請將論文延至\uline{\makebox[2em]{}}年\uline{\makebox[2em]{}}月\uline{\makebox[2em]{}}日再公開。\vspace{3em}\\
+		{\large
+			\textbf{{\makebox[4em][s]{授權人}：\AuthorZh\vspace{1.5em}\\
+			親筆簽名：\uline{\makebox[11em]{}}\vspace{1.5em}\\
+			\Roc\uline{\makebox[5em]{}}\Year\uline{\makebox[4em]{}}\Month\uline{\makebox[4em]{}}\Date}}
+		}
+	\end{titlepage}
+}
+
+% 博碩士論文紙本及數位電子檔著作權校外授權書
+\newcommand{\pcopyrightoffcampuslib}{
+	\newpage
+	\begin{titlepage}
+		\begin{center}
+			\makebox[11.9cm][s]{\textbf{{\huge \uline{國立臺南大學}}}} \\
+			\vspace{1.5em}
+			\makebox[12.9cm][s]{\textbf{{\Large \uline{博碩士論文數位電子檔著作權校外授權書}}}} \\
+		\end{center}
+		\vspace{2.5em}
+		本授權書所授權之學位論文，為本人於\SchoolZh\uline{\Hs\DepartmentZh學系\DepartmentLevel\Hs}，\uline{\Hs\Semester\Hs}學年度第\uline{\Hs\SemesterTerm\Hs}學期取得博、碩士學位之論文。\vspace{1.5em}\\
+		論文題目：\mfbox{28em}{\bf\TitleZh\vspace{1.5em}} \\
+		指導教授：\mfbox{6em}{
+			\AdvisorAZh\hspace{1em}\AdvisorATitleZh \\
+			\AdvisorBZh\hspace{1em}\AdvisorBTitleZh
+			\vspace{3em}} \\
+		□\hs同意\Hs\Hs□\hs不同意 \\
+		本人茲將本著作，以非專屬、無償授權校外使用：基於推動讀者間「資源共享、互惠合作」之理念，回饋社會與學術研究之目的，得不限地域、時間與次數，以紙本、光碟或數位化等各種方法收錄、重製與利用；於著作權法合理使用範圍內，讀者得進行線上檢索、閱覽、下載或列印。
+		\begin{center}
+			論文全文上載網路公開之範圍及時間：\\
+			校外網際網路\Hs\mfbox{25em}{
+			□ 即日起公開 \\
+			□ \Roc\hspace{3em}\Year\hspace{2em}\Month\hspace{2em}\Date公開\\}
+		\end{center}
+		{\large
+			\textbf{{\makebox[4em][s]{授權人}：\AuthorZh\vspace{1.5em}\\
+			親筆簽名：\uline{\makebox[11em]{}}\vspace{1.5em}\\
+			\Roc\uline{\makebox[5em]{}}\Year\uline{\makebox[4em]{}}\Month\uline{\makebox[4em]{}}\Date}}
+		}
+	\end{titlepage}
+}
+
+% 國家圖書館博碩士論文電子檔案上網授權書
+\newcommand{\pcopyrightnationallib}{
+	\newpage
+	{\onehalfspacing
+	\begin{titlepage}
+		\begin{center}
+			\textbf{\LARGE 國家圖書館博碩士論文電子檔案上網授權書} \\
+			{\vspace{2em}\large ID:GT00\AuthorId}
+		\end{center}
+		本授權書所授權之論文為授權人在國立臺南大學\uline{\Hs\CollegeZh\Hs}學院\uline{\Hs\DepartmentZh學系\DepartmentLevel\Hs}，\uline{\Hs\Semester\Hs}學年度第\uline{\Hs\SemesterTerm\Hs}學期取得碩士學位之論文。\vspace{2em} \\
+		論文題目：\mfbox{28em}{\bf\TitleZh\vspace{1.5em}} \\
+		指導教授：\mfbox{6em}{
+			\AdvisorAZh\hspace{1em}\AdvisorATitleZh \\
+			\AdvisorBZh\hspace{1em}\AdvisorBTitleZh
+			\vspace{2.5em}} \\
+		茲同意將授權人擁有著作權之上列論文全文（含摘要），非專屬、無償授權國家圖書館，不限地域、時間與次數，以微縮、光碟或其他各種數位化方式將上列論文重製，並得將數位化之上列論文及論文電子檔以上載網路方式，提供讀者基於個人非營利性質之線上檢索、閱覽、下載或列印。\Vs \\
+		\frame{\mflbox{\Vs
+			\Hs□\Hs\mfbox{34em}{上列論文為授權人向經濟部智慧財產局申請專利之附件或相關文件之一(申請專案號：\makebox[10em]{})，請於\uline{\makebox[2em]{}}年\uline{\makebox[2em]{}}月\uline{\makebox[2em]{}}日後再將上列論文公開或上載網路。 \\}
+			\makebox[1em]{}□\Hs\mfbox{34em}{因上列論文尚未正式對外發表，請於\uline{\makebox[2em]{}}年\uline{\makebox[2em]{}}月\uline{\makebox[2em]{}}日後在將上列論文公開或上載網路。\Vs}
+		}} \Vs\\
+		※ 讀者基於非營利性質之線上檢索、閱覽、下載或列印上列論文，應依著作權法相關規定辦理。\vspace{2.5em} \\
+		{\large
+			\textbf{{\makebox[4em][s]{授權人}：\AuthorZh\vspace{1.5em}\\
+			親筆簽名：\uline{\makebox[11em]{}}\vspace{1.5em}\makebox[4em]{}\\
+			\RocShort\uline{\makebox[5em]{}}\Year\uline{\makebox[4em]{}}\Month\uline{\makebox[4em]{}}\Date}}
+		}
+	\end{titlepage}}
+}
+
+% 學位論文考試中文審定書
+\newcommand{\poralzh}{
+	\newpage
+	\begin{titlepage}
+		\begin{center}
+			\fontsize{16pt}{16pt}\selectfont {
+				\SchoolZh \ThesisType 學位論文考試 \\
+				\CommitteeFormTitle \\
+				\vspace{1em}
+				\uline{\makebox[23em][c]{\DepartmentZh學系\DepartmentLevel}} \\
+				研究生\uline{\makebox[15em][c]{\AuthorZh}}所提之論文 \\
+				\vspace{1em}\parbox{23em}{\uline{\hspace{1em}\TitleZh\hfill}}\vspace{1em} \\
+				經本委員會審查，符合碩士學位論文標準。
+			} \\
+			\vfill
+			\singlespacing\selectfont
+			\fontsize{16pt}{36pt}\selectfont
+			\begin{flushright}
+				\makebox[20em][l]{學位考試委員會} \\
+				\makebox[20em][l]{\makebox[6em][s]{召集人}\underline{\hspace{12em}}\makebox[2em][s]{簽章}} \\
+				\makebox[20em][l]{\makebox[6em][s]{委員}\underline{\hspace{12em}}} \\
+				\makebox[20em][l]{\hspace{6em}\underline{\hspace{12em}}} \\
+				\makebox[20em][l]{\hspace{6em}\underline{\hspace{12em}}} \\
+				\makebox[20em][l]{\hspace{6em}\underline{\hspace{12em}}} \\
+				\makebox[20em][l]{\makebox[6em][s]{指導教授}\underline{\hspace{12em}}\makebox[2em][s]{簽章}} \\
+				\vspace{8pt}
+				\makebox[20em][l]{\makebox[6em][s]{系主任}\underline{\hspace{12em}}\makebox[2em][s]{簽章}} \\
+			\end{flushright}
+			\Roc\hspace{5em}\Year\hspace{4em}\Month\hspace{4em}\Date \\
+			\vspace{2em}
+		\end{center}
+	\end{titlepage}
+}
+
+% 學位論文考試英文審定書
+\newcommand{\poralen}{
+	\newpage
+	\begin{titlepage}
+		\begin{center}
+			\fontsize{16pt}{16pt}\selectfont {
+				Department of \DepartmentEn \\
+				\SchoolEn \\
+				\CityEn, \CountryEn. \\
+				\vspace{1em}
+				\begin{flushright}
+					\makebox[12em][l]{Date:\hspace{0.5em}\underline{\makebox[9em][l]{}}} \\
+				\end{flushright}
+				\begin{flushleft}
+					{\hspace{2em}\it We have carefully read the dissertation entitled {\bf\ul\TitleEn} submitted by {\bf\AuthorEn} in partial fulfillment of the requirements of the degree of {\rm Master} of {\rm Engineering} and recommend its acceptance.} \\
+				\end{flushleft}
+				\vfill
+				\singlespacing\selectfont
+				\fontsize{16pt}{42pt}\selectfont {
+					\underline{\hspace{12em}} \hspace{2em} \underline{\hspace{12em}} \\
+					\underline{\hspace{12em}} \hspace{2em} \underline{\hspace{12em}} \\
+					\vfill
+					\makebox[25em][l]{Thesis Advisor:\hspace{1em}\underline{\hspace{8em}}\hspace{1em}\underline{\hspace{8em}}} \\
+					\makebox[25em][l]{Chairman:\hspace{1em}\underline{\hspace{19.15em}}} \\
+					\vfill
+					\vfill
+				}
+			}
+		\end{center}
+	\end{titlepage}
+}
+
+\ExecuteOptions{master}
+\ProcessOptions*

@@ -1,0 +1,95 @@
+%
+% this file is encoded in utf-8% v2.0 (Apr. 5, 2009)
+%
+% !Tex program = xelatex
+%\RequirePackage[2020-02-02]{latexrelease}
+\documentclass[12pt, a4paper]{definitions/stylesheet}
+\usepackage{definitions/definitions}
+
+\usepackage[verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=3cm,rmargin=2cm, 
+footskip=1.5cm,a4paper]{geometry}
+\usepackage{times}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{wallpaper}
+\usepackage[hypertexnames=false, colorlinks, linkcolor=black, citecolor=black, 
+urlcolor=black, unicode]{hyperref}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xCJKnumb}
+\usepackage{indentfirst}
+\usepackage{caption}
+\usepackage{subcaption}
+% algorithm 
+\usepackage{algorithm} 
+\usepackage{algorithmic}
+\usepackage[nospace]{cite}  % for smart citation
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{tabu}
+
+\renewcommand{\algorithmicrequire}{ \textbf{Input:}} % use Input not require 
+\renewcommand{\algorithmicensure}{ \textbf{Output:}} % use Output not ensure
+
+% Set the default fonts
+\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeBold=true,AutoFakeSlant=true]{標楷體}
+
+
+\begin{document}
+
+% global CJK setting
+\setlength{\parindent}{2em}  %%% ZZZ %%%  段首內縮兩格
+
+% 載入定義
+\input{content/definitions.tex}
+\hypersetup{
+	pdftitle={\PdfTitle},
+	pdfauthor={\SchoolZh{ }\DepartmentZh{學系}\DepartmentLevel{ }\AuthorZh},
+	pdfsubject={\TitleZh},
+	pdfkeywords={\PdfKeywords}}
+
+% 如果不需要以中文數字一、二、三呈現章別，例如「第一章」
+% 則請把下列介於 >>> 與 <<< 之間
+% 的文字行關掉 (行首加上百分號), 會以「第 1 章」呈現
+%% 中文數字章別 >>>
+\input{content/chnum.tex}
+%% <<< 中文數字章別
+
+%%% 以下是載入前頁、本文、後頁
+% 請勿更動
+% 如需針對個別章節獨立編譯
+% 請在 my_chapters.tex 檔裡對個別章節的 \input 指令以行首百分號方式做開關。
+
+%\watermark
+\input{content/frontpages.tex}
+
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\watermark
+\input{content/main.tex}
+
+\input{content/backpages.tex}
+
+% 附錄
+\input{content/appendix1.tex}
+%\input{content/appendix2.tex}
+%\input{content/appendix3.tex}
+%\input{content/appendix4.tex}
+%\input{content/appendix5.tex}
+%\input{content/appendix6.tex}
+%\input{content/appendix7.tex}
+%\input{content/appendix8.tex}
+
+
+%\clearpage % to make sure all CJK characters are processed
+%\end{CJK}  %%% ZZZ %%%
+\end{document} 
+ 

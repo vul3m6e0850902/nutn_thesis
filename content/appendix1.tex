@@ -1,0 +1,29 @@
+\clearpage
+\phantomsection\addcontentsline{toc}{chapter}{附錄一{ }附錄一附錄一}
+
+\centerline{\Large{\textbf{附錄一\hs 附錄一附錄一}}}
+
+\vspace{2\baselineskip}
+
+%\renewcommand\arraystretch{0.5}
+\begin{table}[htbp]
+	\caption{線上手機位置識別混淆矩陣}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		\multicolumn{2}{|c|}{}&\multicolumn{5}{c|}{Predicted Class} \\  
+		\cline{3-7}
+		\multicolumn{2}{|c|}{} & FrontPocket & BackPocket & CoatPocket & ShoulderBag & BackBag \\ \hline       
+		\multirow{5}{*}{\tabincell{c}{Actual\\Class}}& 
+		FrontPocket& 
+		184&8&8&0&0\\ \cline{2-7}
+		&BackPocket&
+		10&187&3&0&0\\ \cline{2-7}
+		&CoatPocket&
+		11&0&183&2&4\\ \cline{2-7}                               
+		&ShoulderBag& 
+		1&0&10&158&31\\ \cline{2-7}
+		&BackBag& 
+		0&0&18&15&167\\ \hline                                                                
+	\end{tabular}
+\end{table}

@@ -1,0 +1,39 @@
+%\ptitlepage  % 論文書皮頁
+%\includepdf[pages={1}]{content/frontpages/titlepage.pdf}
+
+\includepdf[pages={1}]{content/frontpages/front.pdf}     %論文封面
+\includepdf[pages={1}]{content/frontpages/bookname.pdf}   %書名頁
+
+%\poralzh  % 論文口試委員會審定書
+% \includepdf[pages={1}]{content/frontpages/oral.pdf}
+%\poralen
+% \includepdf[pages={1}]{content/frontpages/oral2.pdf}
+
+\newpage
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\begin{abstractZh}  %中文摘要
+摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要
+\end{abstractZh}
+
+\begin{abstractEn}  %英文摘要
+Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract
+\end{abstractEn} 
+
+\newpage
+\begin{acknowledgement} %誌謝
+\par
+致謝致謝致謝致謝致謝致謝致謝致謝致謝致謝致謝致謝致謝致謝
+\end{acknowledgement}
+
+{\singlespacing\selectfont
+	\newpage\phantomsection\addcontentsline{toc}{chapter}{\contentsname}
+	\tableofcontents %目錄
+
+	\newpage\phantomsection\addcontentsline{toc}{chapter}{\listtablename}
+	\listoftables  %表目錄
+	
+	\newpage\phantomsection\addcontentsline{toc}{chapter}{\listfigurename}
+	\listoffigures  %圖目錄
+}
